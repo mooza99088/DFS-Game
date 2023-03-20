@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 4;
     private bool moving = false;
     private Vector3 currentDir;
+
+
+    [SerializeField] EventSystem _eventSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -49,9 +53,9 @@ public class Player : MonoBehaviour
     }
 
     //Implement mouse interaction method here
-    public void MouseInput()
+    public void MouseInteraction()
     {
-        
+      
     }
     //call the input(direction) method
     //invoke 'change colour' event
